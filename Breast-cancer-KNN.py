@@ -36,6 +36,8 @@ class KNN:
             self.model.fit(X_train,y_train)
             y_train_pred = self.model.predict(X_train)
             print(f'the training accuracy : {accuracy_score(y_train,y_train_pred)}')
+            y_test_pred=self.model.predict(X_test)
+            print(f'test accuracy :{accuracy_score(y_test,y_test_pred)}')
 
 
         except Exception as e:
